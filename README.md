@@ -36,4 +36,4 @@ Graveling Games is a puzzle RPG game based on the mythology and characters of th
 
 ### Legal Information
 Dead Like Me (DLM) and its characters are copyright MGM Television Entertainment Inc. This game is created under fair use laws as an homage only; I take no credit for the creation of DLM. I made this as a fan of the show, not to steal credit from anyone.
-While the source code is free to view on Github, it is *not* free to redistribute or modify. If you're interested in doing so, you should contact me to discuss it at MinestruckSite@gmail.com.
+While the source code is free to view on Github, it is *not* free to redistribute or modify in any way. If you're interested in doing so, you should contact me to discuss it at MinestruckSite@gmail.com.
