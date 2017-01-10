@@ -5,9 +5,42 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprites name="Conquest">
+      <sprite>sprites\SpriteConquestNode</sprite>
+      <sprite>sprites\SpriteConquestNodeBlack</sprite>
+    </sprites>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <scripts name="Bars">
+      <script>scripts\initBars.gml</script>
+      <script>scripts\fillBar.gml</script>
+      <script>scripts\saveBars.gml</script>
+      <script>scripts\loadBars.gml</script>
+      <script>scripts\loadOrInitBars.gml</script>
+    </scripts>
+    <script>scripts\rescale_application_surface.gml</script>
+    <script>scripts\ifelse.gml</script>
+  </scripts>
+  <objects name="objects">
+    <objects name="Conquest">
+      <object>objects\ObjectConquestNode</object>
+    </objects>
+    <objects name="Common">
+      <object>objects\ObjectFiller</object>
+    </objects>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\RoomSetup</room>
+    <rooms name="Menus">
+      <room>rooms\RoomMainMenu</room>
+    </rooms>
+  </rooms>
+  <constants number="1">
+    <constant name="NULL">undefined</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
