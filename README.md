@@ -3,7 +3,7 @@ Graveling Games is a puzzle RPG game based on the mythology and characters of th
 
 ### TODO List:
 * Conquest mini-game
-..* Rotate your nodes to capture all free nodes along the path, gaining their energy. When no free nodes exist, board is reset and randomized.
+  * Rotate your nodes to capture all free nodes along the path, gaining their energy. When no free nodes exist, board is reset and randomized.
 * Main menu
 * Battle system
   * Gaining energy fills the bar of its color. After your turn, energy bars are drained and used for attack, which is blocked by opponents' defense scores.
