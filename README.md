@@ -1,0 +1,6 @@
+==Dead Like Me: Graveling Games
+Graveling Games is a puzzle RPG game based on the mythology and characters of the Dead Like Me television series. You begin as Georgia "George" Lass...and you have just died. Now that you're an undead reaper, it's your job to take peoples' souls before the Gravelings ensure they meet their appointment with death. To do that, you must engage the Gravelings in puzzle minigames to keep them off your tail long enough to find the target and reap his soul. Don't take too long, though; if you miss the appointment, you'll fail the reap and doom the target to an eternity trapped in their own, dead bodies!
+
+===Legal Information
+Dead Like Me (DLM) and its characters are copyright MGM Television Entertainment Inc. This game is created under fair use laws as an homage only; I take no credit for the creation of DLM. I made this as a fan of the show, not to steal credit from anyone.
+While the source code is free to view on Github, it is *not* free to redistribute or modify. If you're interested in doing so, you should contact me to discuss it at MinestruckSite@gmail.com.
