@@ -34,9 +34,13 @@ var courageBar = ds_map_create();
 ds_map_add_map(global.barMap, c_purple, courageBar);
 
 /* Now, we initialize all the bars themselves */
-var key=ds_map_find_first(global.barMap), val=undefined;
+var key = ds_map_find_first(global.barMap), val = undefined;
+global.barColors = ds_list_create();
 while (!is_undefined(key)) {
     val=ds_map_find_value(global.barMap, key);
+
+    // Keep a list of possible colors for faster lookup and selection later    
+    ds_list_add(global.barColors, key);
     
     ds_map_add(val, "Max", 100);
     ds_map_add(val, "Current", 0);

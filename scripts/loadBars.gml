@@ -32,6 +32,19 @@ else {
     if (ds_exists(global.barMap, ds_type_map)) {
         ds_map_destroy(global.barMap);
     }
+    
     global.barMap = map;
+    
+    // Create the list of possible bar colors for faster lookup/selection later
+    if (ds_exists(global.barColors, ds_type_list)) {
+        ds_list_destroy(global.barColors);
+    }
+    global.barColors = ds_list_create();
+    var key=ds_map_find_first(global.barMap);
+    while (!is_undefined(key)) {
+        ds_list_add(global.barColors, key);
+        key=ds_map_find_next(global.barMap, key);
+    }
+    
     return true;
 }

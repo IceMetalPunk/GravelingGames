@@ -25,32 +25,31 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>fillColor = NULL;
-fillAmount = 1;
-checkedByAI = false;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="10">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>fillBar(fillColor, fillAmount);
+            <string>// Create the node grid
+var setWhite = false, inst = noone, whiteNode = noone, blackNode = noone;
+var w = sprite_get_width(SpriteConquestNode), h = sprite_get_height(SpriteConquestNode);
+var y0 = 167, x0 = (room_width - (room_width div w)*w)/2;
+for (var yy=y0; yy&lt;room_height-h; yy+=h) {
+    for (var xx=x0; xx&lt;room_width-w; xx+=w) {
+        inst = instance_create(xx + w/2, yy + h/2, ObjectConquestNode);
+        if (!setWhite) {
+            setWhite = true;
+            whiteNode = inst;
+        }
+    }
+}
+blackNode = inst;
+
+// Setup corners for white and black nodes (player vs opponent starting nodes)
+whiteNode.fillAmount = 0;
+whiteNode.image_blend = c_white;
+blackNode.fillAmount = 0;
+blackNode.image_blend = c_white;
+blackNode.sprite_index = SpriteConquestNodeBlack;
+
+// Fill the initial paths, not collecting any energy
+fillConquest(c_white, whiteNode, false);
+fillConquest(c_black, blackNode, false);
 </string>
           </argument>
         </arguments>

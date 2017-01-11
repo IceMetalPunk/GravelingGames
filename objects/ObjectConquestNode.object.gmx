@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>ObjectFiller</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,7 +25,85 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>event_inherited();
+fillColor=choose_color();
+
+/* Initialize graphics options */
+image_speed = 0;
+image_index = 0;
+image_angle = 0;
+node_angle = irandom(3) * 90;
+draw_angle = node_angle;
+image_blend = fillColor;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (draw_angle == node_angle &amp;&amp; image_blend == c_white &amp;&amp; sprite_index == SpriteConquestNode) {
+    node_angle = (node_angle - 90 + 360) % 360;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_self();
+
+// Make uncaptured nodes lighter to differentiate them from captured nodes
+image_alpha = 0.75 + 0.25 * (image_blend == c_white);
+
+// Rotate animation
+if (draw_angle != node_angle) {
+    var turnSpeed = 4;
+    draw_angle = (draw_angle - turnSpeed + 360) % 360;
+    if (abs(draw_angle - node_angle) &lt;= turnSpeed) {
+        draw_angle = node_angle;
+    }
+    
+    if (draw_angle == node_angle) {
+        fillConquest(c_white, id, true);
+    }
+    
+}
+
+// Draw arrow
+draw_sprite_ext(sprite_index, 1, x + lengthdir_x(1, draw_angle + 180), y + lengthdir_y(1, draw_angle + 180), image_xscale, image_yscale, draw_angle, c_white, image_alpha);
+</string>
           </argument>
         </arguments>
       </action>

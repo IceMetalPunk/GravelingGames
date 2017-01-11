@@ -20,6 +20,10 @@
       <script>scripts\saveBars.gml</script>
       <script>scripts\loadBars.gml</script>
       <script>scripts\loadOrInitBars.gml</script>
+      <script>scripts\choose_color.gml</script>
+    </scripts>
+    <scripts name="Conquest">
+      <script>scripts\fillConquest.gml</script>
     </scripts>
     <script>scripts\rescale_application_surface.gml</script>
     <script>scripts\ifelse.gml</script>
@@ -27,6 +31,7 @@
   <objects name="objects">
     <objects name="Conquest">
       <object>objects\ObjectConquestNode</object>
+      <object>objects\ObjectConquestInit</object>
     </objects>
     <objects name="Common">
       <object>objects\ObjectFiller</object>
@@ -36,6 +41,9 @@
     <room>rooms\RoomSetup</room>
     <rooms name="Menus">
       <room>rooms\RoomMainMenu</room>
+    </rooms>
+    <rooms name="Minigames">
+      <room>rooms\RoomConquest</room>
     </rooms>
   </rooms>
   <constants number="1">

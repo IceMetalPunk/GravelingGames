@@ -12,10 +12,15 @@
   <showcolour>-1</showcolour>
   <code>// Initialize bar data
 global.barMap = -1; 
+global.barColors = -1;
 loadOrInitBars("barData.dat");
-room_goto(RoomMainMenu);
+randomize();
 
-rescale_application_surface(320, 480);</code>
+// Rescale initial application surface
+rescale_application_surface(320, 480);
+
+// Go the the main menu
+room_goto(RoomMainMenu);</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
